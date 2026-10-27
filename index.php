@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            Rental PS Cihuyy
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#pelanggan">Data Pelanggan</a></li>
+            <li><a href="#riwayat">Riwayat</a></li>
+
+        </ul>
+    </nav>
+<div class="container">
+    
+
     <div class="form-card">
         <label for="pilihan" style="color:  #16a34a;">Nama kasir</label> <br>
         <select name="pilihan" id="id_kasir">
@@ -16,7 +32,7 @@
         </select> <br>
 
         Tanggal <br>
-        <input type="text" name="tanggal" placeholder="tanggal" required>
+        <input type="date" name="tanggal" placeholder="tanggal" required>
         <br>
 
         Nama pelanggan <br>
@@ -46,10 +62,11 @@
     </div>
 
     <div class="card-right">
-
-
-    
+        <h3>Informasi Rental</h3>
+        <p>Selamat datang di Rental PS!</p>
+        <p>Silakan isi form untuk menyewa PlayStation.</p>
     </div>
+</div>
 
 </body>
 </html>
