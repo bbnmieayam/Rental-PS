@@ -48,7 +48,6 @@ body {
     font-weight: bold;
 }
 
-/* Menu navbar */
 .navbar-menu {
     display: flex;
     align-items: center;
@@ -77,6 +76,7 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="date"],
+input[type="time"],
 select {
     width: 100%;
     max-width: 420px;

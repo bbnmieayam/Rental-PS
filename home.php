@@ -54,9 +54,9 @@
          Main Jam Berapa <br>
 
         mulai <br>
-        <input type="number" name="jam_mulai" placeholder="Masukkan jam mulai" required><br>
+        <input type="time" name="jam_mulai" placeholder="Masukkan jam mulai" required><br>
         selesai <br>
-        <input type="number" name="jam_selesai" placeholder="Masukkan jam selesai" required><br>
+        <input type="time" name="jam_selesai" placeholder="Masukkan jam selesai" required><br>
         <br>
         <input type="submit" name="simpan" required>
     </div>
