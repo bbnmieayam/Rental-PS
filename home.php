@@ -70,7 +70,7 @@
 <div class="container">
     
 
-    <div class="form-card">
+    <form class="form-card" method="POST">
         <label for="pilihan" style="color:  #16a34a;">Nama kasir</label> <br>
         <select name="pilihan" id="id_kasir">
             <option value="Agus">Agus</option>
@@ -106,7 +106,7 @@
         <input type="time" name="jam_selesai" placeholder="Masukkan jam selesai" required><br>
         <br>
         <input type="submit" name="simpan" required>
-    </div>
+    </form>
 
     <div class="card-right">
         <h2>Daftar Ruangan PS</h2>
