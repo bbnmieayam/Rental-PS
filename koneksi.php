@@ -11,10 +11,10 @@ if (!$koneksi) {
 
 mysqli_set_charset($koneksi, "utf8mb4");
 
-function cari_atau_buat_pelanggan($koneksi, $nama, $hp)
+function cari_atau_buat_pelanggan($koneksi, $nama_pelanggan, $nomor_hp_pelanggan)
 {
     $stmt = mysqli_prepare($koneksi, "SELECT id_pelanggan FROM pelanggan WHERE nama_pelanggan = ? AND nomor_hp_pelanggan = ? LIMIT 1");
-    mysqli_stmt_bind_param($stmt, "ss", $nama, $hp);
+    mysqli_stmt_bind_param($stmt, "ss", $nama_pelanggan, $nomor_hp_pelanggan);
     mysqli_stmt_execute($stmt);
     $res = mysqli_stmt_get_result($stmt);
     if ($row = mysqli_fetch_assoc($res)) {
@@ -22,7 +22,7 @@ function cari_atau_buat_pelanggan($koneksi, $nama, $hp)
     }
 
     $stmt = mysqli_prepare($koneksi, "INSERT INTO pelanggan (nama_pelanggan, nomor_hp_pelanggan) VALUES (?, ?)");
-    mysqli_stmt_bind_param($stmt, "ss", $nama, $hp);
+    mysqli_stmt_bind_param($stmt, "ss", $nama_pelanggan, $nomor_hp_pelanggan);
     mysqli_stmt_execute($stmt);
     return (int) mysqli_insert_id($koneksi);
 }
