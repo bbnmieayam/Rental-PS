@@ -14,7 +14,7 @@
         </div>
 
         <ul class="navbar-menu">
-            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#home">Beranda</a></li>
             <li><a href="#pelanggan">Data Pelanggan</a></li>
             <li><a href="#riwayat">Riwayat</a></li>
 
