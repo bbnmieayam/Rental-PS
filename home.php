@@ -62,9 +62,68 @@
     </div>
 
     <div class="card-right">
-        <h3>Informasi Rental</h3>
-        <p>Selamat datang di Rental PS!</p>
-        <p>Silakan isi form untuk menyewa PlayStation.</p>
+        <h2>Daftar Ruangan PS</h2>
+    <p class="subtitle">Pilih ruangan PlayStation</p>
+
+    <div class="ruangan-container">
+
+        <div class="ruangan">
+            <h3>PS01</h3>
+            <p>PS4</p>
+            <p>Rp8.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS02</h3>
+            <p>PS4</p>
+            <p>Rp8.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS03</h3>
+            <p>PS4</p>
+            <p>Rp8.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS04</h3>
+            <p>PS4</p>
+            <p>Rp8.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS05</h3>
+            <p>PS4</p>
+            <p>Rp8.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS06</h3>
+            <p>PS5</p>
+            <p>Rp12.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS07</h3>
+            <p>PS5</p>
+            <p>Rp12.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+        <div class="ruangan">
+            <h3>PS08</h3>
+            <p>PS5</p>
+            <p>Rp12.000 / jam</p>
+            <span class="status tersedia">Tersedia</span>
+        </div>
+
+    </div>
     </div>
 </div>
 

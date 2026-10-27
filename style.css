@@ -173,3 +173,74 @@ input[type="submit"]:active {
     border-radius: 10px;
     box-shadow: 0 2px 8px #00000020;
 }
+
+
+.card-right {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-right h2 {
+    color: #166534;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.ruangan-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.ruangan {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 18px 12px;
+    text-align: center;
+    background: #f9fafb;
+    transition: 0.3s;
+}
+
+.ruangan:hover {
+    border-color: #16a34a;
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.15);
+    transform: translateY(-3px);
+}
+
+.ruangan h3 {
+    color: #166534;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.ruangan p {
+    color: #4b5563;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tersedia {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.digunakan {
+    background: #fee2e2;
+    color: #991b1b;
+}
