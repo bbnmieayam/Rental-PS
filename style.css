@@ -14,6 +14,7 @@ body {
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -41,7 +42,6 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Logo */
 .navbar-logo {
     color: white;
     font-size: 24px;
@@ -164,6 +164,13 @@ input[type="submit"]:active {
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
+}
+
+.container-riwayat {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+   align-self: center;
 }
 
 .form-card {

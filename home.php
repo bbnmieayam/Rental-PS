@@ -44,19 +44,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="navbar-logo">
             Rental PS Cihuyy
         </div>
 
+        <div class="navbar-clock">
+            <div id="jam-digital">00:00:00</div>
+            <div id="tanggal-digital">Memuat tanggal...</div>
+        </div>
+        
         <ul class="navbar-menu">
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#pelanggan">Data Pelanggan</a></li>
-            <li><a href="#riwayat">Riwayat</a></li>
+            <li><a href="home.php"><span>🏠</span> Beranda</a></li>
+            <li><a href="pelanggan.php"><span>♙</span> Data Pelanggan</a></li>
+            <li><a href="riwayat.php"><span>◷</span> Riwayat</a></li>
 
         </ul>
     </nav>
+    
 <div class="container">
     
 
@@ -70,7 +75,7 @@
         </select> <br>
 
         Tanggal <br>
-        <input type="date" name="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
+        <input type="date" name="tanggal" id="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
         <br>
 
         Nama pelanggan <br>
@@ -88,14 +93,14 @@
         </select> <br> <br>
 
         Masukan Durasi Main <br>
-        <input type="number" name="durasi_jam" id="durasi_jam" min="1" required> <br>
+        <input type="number" name="durasi_jam" id="durasi_jam" min="1" max="24" step="1" value="1" required> <br>
     
          Main Jam Berapa <br>
 
         mulai <br>
-        <input type="time" name="jam_mulai" placeholder="Masukkan jam mulai" required><br>
+        <input type="time" name="jam_mulai" id="jam_mulai" required><br>
         selesai <br>
-        <input type="time" name="jam_selesai" placeholder="Masukkan jam selesai" required><br>
+        <input type="time" name="jam_selesai" id="jam_selesai" readonly required><br>
         <br>
         <input type="submit" name="simpan" value="Simpan">
     </form>
@@ -166,5 +171,6 @@
     </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
