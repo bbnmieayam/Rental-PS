@@ -16,12 +16,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-            Rental PS Cihuyy
-        </div>
-
-        <div class="navbar-clock">
-            <div id="jam-digital">00:00:00</div>
-            <div id="tanggal-digital">Memuat tanggal...</div>
+            Kasir Rental PS Cihuyy
         </div>
         
         <ul class="navbar-menu">

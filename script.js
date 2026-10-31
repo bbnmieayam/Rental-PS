@@ -36,32 +36,6 @@ if (tanggal && durasi && jamMulai && jamSelesai) {
     hitungJamSelesai();
 }
 
-function updateJamDigital() {
-    const sekarang = new Date();
-
-    const jam = document.getElementById('jam-digital');
-    const tanggalDigital = document.getElementById('tanggal-digital');
-
-    if (!jam || !tanggalDigital) return;
-
-    jam.textContent = sekarang.toLocaleTimeString('id-ID', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    });
-
-    tanggalDigital.textContent = sekarang.toLocaleDateString('id-ID', {
-        weekday: 'long',
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-    });
-}
-
-updateJamDigital();
-setInterval(updateJamDigital, 1000);
-
 document.addEventListener('DOMContentLoaded', function () {
     var ps     = document.getElementById('ps_id');
     var durasi = document.getElementById('durasi_jam');

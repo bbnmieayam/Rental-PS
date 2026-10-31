@@ -47,13 +47,10 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-             Rental PS Cihuyy
+            Kasir Rental PS Cihuyy
         </div>
 
-        <div class="navbar-clock">
-            <div id="jam-digital">00:00:00</div>
-            <div id="tanggal-digital">Memuat tanggal...</div>
-        </div>
+
         
         <ul class="navbar-menu">
             <li><a href="home.php"><i class="bi bi-house-door-fill"></i> Beranda</a></li>
