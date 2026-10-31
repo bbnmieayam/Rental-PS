@@ -55,7 +55,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-            Rental PS Cihuyy
+            Update Transaksi
         </div>
 
         <div class="navbar-clock">
@@ -63,13 +63,7 @@
             <div id="tanggal-digital">Memuat tanggal...</div>
         </div>
         
-        <ul class="navbar-menu">
-            <li><a href="home.php"><span>🏠</span> Beranda</a></li>
-            <li><a href="pelanggan.php"><span>♙</span> Data Pelanggan</a></li>
-            <li><a href="riwayat.php"><span>◷</span> Riwayat</a></li>
-
-        </ul>
-    </nav>
+        </nav>
     
 <div class="container">
     
