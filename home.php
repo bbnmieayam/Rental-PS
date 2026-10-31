@@ -119,56 +119,72 @@
             <h3>PS01</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">EA FC 26</span>
+            <span class="game">MotoGP 23</span>
+            <span class="game">UFC 23</span>
         </div>
 
         <div class="ruangan">
             <h3>PS02</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Minecraft</span>
+            <span class="game">Roblox</span>
+            <span class="game">EA FC 26</span>
         </div>
 
         <div class="ruangan">
             <h3>PS03</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">God of War</span>
+            <span class="game">Elden Ring</span>
+            <span class="game">Dark Souls 3</span>
         </div>
 
         <div class="ruangan">
             <h3>PS04</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Genshin Impact</span>
+            <span class="game">Spider-Man</span>
+            <span class="game">A Way Out</span>
         </div>
 
         <div class="ruangan">
             <h3>PS05</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Tekken 8</span>
+            <span class="game">Mortal Kombat</span>
+            <span class="game">Battlefield 6</span>
         </div>
 
         <div class="ruangan">
             <h3>PS06</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Grand Turismo 7</span>
+            <span class="game">GTA 5</span>
+            <span class="game">NFS Heat</span>
         </div>
 
         <div class="ruangan">
             <h3>PS07</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Naruto x Boruto 5</span>
+            <span class="game">Astrobot</span>
+            <span class="game">Horizon</span>
         </div>
 
         <div class="ruangan">
             <h3>PS08</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">God of War</span>
+            <span class="game">EA FC 26</span>
+            <span class="game">E-Football</span>
         </div>
 
     </div>

@@ -25,6 +25,17 @@
         </ul>
     </nav>
 
+    <div class="container-pelanggan">
+        <table>
+            <tr>
+                <th>Nama Pelanggan</th>
+                <th>Nomor HP</th>
+            </tr>
+
+        </table>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

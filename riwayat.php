@@ -37,7 +37,7 @@
     </nav>
 
     <div class="container-riwayat">
-        <table class="table-riwayat">
+        <table>
             <tr>
                 <th>Nama Kasir</th>
                 <th>Tanggal</th>
