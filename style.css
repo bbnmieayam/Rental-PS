@@ -204,6 +204,7 @@ input[type="submit"]:active {
     text-align: center;
     background: #f9fafb;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .ruangan:hover {

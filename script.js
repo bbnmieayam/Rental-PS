@@ -78,3 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     hitung();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var ps = document.getElementById('ps_id');
+
+    document.querySelectorAll('.ruangan').forEach(function (kartu) {
+        kartu.addEventListener('click', function () {
+            var id = parseInt(kartu.querySelector('h3').textContent.replace('PS', ''), 10);
+            ps.value = id;
+            ps.dispatchEvent(new Event('change'));
+        });
+    });
+});

@@ -1,3 +1,9 @@
+<?php
+    include 'koneksi.php';
+ 
+    $result = mysqli_query($koneksi, "SELECT nama_pelanggan, nomor_hp_pelanggan FROM pelanggan ORDER BY nama_pelanggan ASC");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +37,22 @@
                 <th>Nama Pelanggan</th>
                 <th>Nomor HP</th>
             </tr>
-
+    <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <tr>
+                <td><?php echo htmlspecialchars($row['nama_pelanggan']); ?></td>
+                <td><?php echo htmlspecialchars($row['nomor_hp_pelanggan']); ?></td>
+            </tr>
+            <?php } ?>
+ 
+            <?php if (mysqli_num_rows($result) === 0) { ?>
+            <tr>
+                <td colspan="3" style="text-align:center;">Belum ada data pelanggan.</td>
+            </tr>
+            <?php } ?>
         </table>
-
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
