@@ -61,3 +61,20 @@ function updateJamDigital() {
 
 updateJamDigital();
 setInterval(updateJamDigital, 1000);
+
+document.addEventListener('DOMContentLoaded', function () {
+    var ps     = document.getElementById('ps_id');
+    var durasi = document.getElementById('durasi_jam');
+    var total  = document.getElementById('total');
+
+    function hitung() {
+        var harga = ps.options[ps.selectedIndex].getAttribute('data-harga') || 0;
+        var jam   = durasi.value || 0;
+        total.value = 'Rp ' + (harga * jam).toLocaleString('id-ID');
+    }
+
+    ps.addEventListener('change', hitung);
+    durasi.addEventListener('input', hitung);
+
+    hitung();
+});

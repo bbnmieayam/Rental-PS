@@ -86,7 +86,7 @@
         <select name="ps_id" id="ps_id" required>
             <option value="">-- Pilih PS --</option>
             <?php while ($p = mysqli_fetch_assoc($ps_list)) { ?>
-                <option value="<?php echo $p['id_ps']; ?>">
+                <option value="<?php echo $p['id_ps']; ?>" data-harga="<?php echo (float) $p['harga_per_jam']; ?>">
                     <?php echo $p['id_ps'] . ' - ' . htmlspecialchars($p['nama_ps']) . ' (' . htmlspecialchars($p['tipe']) . ') - Rp' . number_format((float) $p['harga_per_jam'], 0, ',', '.') . '/jam'; ?>
                 </option>
             <?php } ?>
@@ -103,6 +103,9 @@
         <input type="time" name="jam_selesai" id="jam_selesai" readonly required><br>
         <br>
         
+        Total biaya <br>
+        <input type="text" id="total" readonly><br>
+
         <input type="submit" name="simpan" value="Simpan">
     </form>
 
