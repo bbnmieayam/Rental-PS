@@ -1,3 +1,15 @@
+<?php
+    include 'koneksi.php';
+ 
+    $sql_read = "SELECT t.*, p.nama_pelanggan, p.nomor_hp_pelanggan, k.nama_kasir, c.nama_ps, c.tipe
+                 FROM transaksi t
+                 JOIN pelanggan p ON p.id_pelanggan = t.pelanggan_id
+                 JOIN konsol c ON c.id_ps = t.ps_id
+                 JOIN kasir k ON k.id_kasir = t.kasir_id
+                 ORDER BY t.tanggal DESC, t.jam_mulai DESC";
+    $result = mysqli_query($koneksi, $sql_read);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +47,35 @@
                 <th>Durasi Main</th>
                 <th>Mulai</th>
                 <th>Selesai</th>
+                <th>Total Biaya</th>
                 <th>Aksi</th>
             </tr>
-        </table> 
+       
+
+  <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+            <tr>
+                <td><?php echo htmlspecialchars($row['nama_kasir']); ?></td>
+                <td><?php echo date('d-m-Y', strtotime($row['tanggal'])); ?></td>
+                <td><?php echo htmlspecialchars($row['nama_pelanggan']); ?></td>
+                <td><?php echo htmlspecialchars($row['nomor_hp_pelanggan']); ?></td>
+                <td><?php echo $row['ps_id'] . ' - ' . htmlspecialchars($row['nama_ps']) . ' (' . htmlspecialchars($row['tipe']) . ')'; ?></td>
+                <td><?php echo (int) $row['durasi_jam']; ?> jam</td>
+                <td><?php echo substr($row['jam_mulai'], 0, 5); ?></td>
+                <td><?php echo substr($row['jam_selesai'], 0, 5); ?></td>
+                <td>Rp <?php echo number_format($row['total_biaya'], 0, ',', '.'); ?></td>
+                <td>
+                    <a href="edit.php?id=<?php echo $row['id_transaksi']; ?>">Edit</a> |
+                    <a href="hapus.php?id=<?php echo $row['id_transaksi']; ?>" onclick="return confirm('Yakin hapus transaksi ini?')">Hapus</a>
+                </td>
+            </tr>
+            <?php } ?>
+
+            <?php if (mysqli_num_rows($result) === 0) { ?>
+            <tr>
+                <td colspan="10" style="text-align:center;">Belum ada transaksi.</td>
+            </tr>
+            <?php } ?>
+        </table>
     </div>
 
     <script src="script.js"></script>
