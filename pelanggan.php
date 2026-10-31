@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Pelanggan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -24,11 +25,11 @@
         </div>
         
         <ul class="navbar-menu">
-            <li><a href="home.php"><span>🏠</span> Beranda</a></li>
-            <li><a href="pelanggan.php"><span>♙</span> Data Pelanggan</a></li>
-            <li><a href="riwayat.php"><span>◷</span> Riwayat</a></li>
-
+            <li><a href="home.php"><i class="bi bi-house-door-fill"></i> Beranda</a></li>
+            <li><a href="pelanggan.php"><i class="bi bi-people-fill"></i> Data Pelanggan</a></li>
+            <li><a href="riwayat.php"><i class="bi bi-clock-history"></i> Riwayat</a></li>
         </ul>
+
     </nav>
 
     <div class="container-pelanggan">
