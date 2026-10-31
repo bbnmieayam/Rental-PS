@@ -25,7 +25,19 @@
     </nav>
 
     <div class="container-riwayat">
-           
+        <table class="table-riwayat">
+            <tr>
+                <th>Nama Kasir</th>
+                <th>Tanggal</th>
+                <th>Nama Pelanggan</th>
+                <th>Nomor HP</th>
+                <th>Nomor PS</th>
+                <th>Durasi Main</th>
+                <th>Mulai</th>
+                <th>Selesai</th>
+                <th>Aksi</th>
+            </tr>
+        </table> 
     </div>
 
     <script src="script.js"></script>
