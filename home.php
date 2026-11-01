@@ -24,14 +24,6 @@
 
     $kasir_list = mysqli_query($koneksi, "SELECT id_kasir, nama_kasir FROM kasir ORDER BY nama_kasir");
     $ps_list    = mysqli_query($koneksi, "SELECT id_ps, nama_ps, tipe, harga_per_jam FROM konsol ORDER BY id_ps");
-
-    $sql_read = "SELECT t.*, p.nama_pelanggan, p.nomor_hp_pelanggan, k.nama_kasir, c.nama_ps, c.tipe
-                 FROM transaksi t
-                 JOIN pelanggan p ON p.id_pelanggan = t.pelanggan_id
-                 JOIN konsol c ON c.id_ps = t.ps_id
-                 JOIN kasir k ON k.id_kasir = t.kasir_id
-                 ORDER BY t.tanggal DESC";
-    $result = mysqli_query($koneksi, $sql_read);
 ?>
 
 
