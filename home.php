@@ -18,7 +18,7 @@
         mysqli_stmt_bind_param($stmt, "iiisissd", $pelanggan_id, $ps_id, $kasir_id, $tanggal, $durasi, $jam_mulai, $jam_selesai, $total);
         mysqli_stmt_execute($stmt);
 
-        header("Location: home.php");
+        header("Location: riwayat.php");
         exit;
     }
 
