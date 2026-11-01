@@ -47,7 +47,8 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-            Kasir Rental PS Cihuyy
+            Kasir Rental PS Cihuyy 
+            <img src="cihuyy.jpg">
         </div>
 
 
@@ -64,7 +65,7 @@
     
 
     <form class="form-card" method="POST">
-        <label style="color:  #16a34a;">Nama kasir</label> <br>
+        <label>Nama kasir</label> <br>
         <select name="kasir_id" required>
             <option value="">-- Pilih Kasir --</option>
             <?php while ($k = mysqli_fetch_assoc($kasir_list)) { ?>
@@ -72,15 +73,15 @@
             <?php } ?>
         </select> <br>
 
-        Tanggal <br>
+        <label>Tanggal</label> <br>
         <input type="date" name="tanggal" id="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
         <br>
 
-        Nama pelanggan <br>
+        <label>Nama pelanggan</label> <br>
         <input type="text" name="nama_pelanggan" placeholder="nama pelanggan" required><br>
-        Nomor HP<br>
+        <label>Nomor HP</label><br>
         <input type="text" name="nomor_hp_pelanggan" placeholder="nomor HP" required><br>
-        <label style="color:  #16a34a;">Nomor PS</label><br> 
+        <label>Nomor PS</label><br> 
         <select name="ps_id" id="ps_id" required>
             <option value="">-- Pilih PS --</option>
             <?php while ($p = mysqli_fetch_assoc($ps_list)) { ?>
@@ -90,18 +91,18 @@
             <?php } ?>
         </select> <br> <br>
 
-        Masukan Durasi Main <br>
+        <label>Masukan Durasi Main</label> <br>
         <input type="number" name="durasi_jam" id="durasi_jam" min="1" max="24" step="1" value="1" required> <br>
     
-         Main Jam Berapa <br>
+        <label>Main Jam Berapa</label> <br>
 
-        mulai <br>
+        <label>mulai</label> <br>
         <input type="time" name="jam_mulai" id="jam_mulai" required><br>
-        selesai <br>
+        <label>selesai</label> <br>
         <input type="time" name="jam_selesai" id="jam_selesai" readonly required><br>
         <br>
         
-        Total biaya <br>
+        <label>Total biaya</label> <br>
         <input type="text" id="total" readonly><br>
 
         <input type="submit" name="simpan" value="Simpan">

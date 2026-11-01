@@ -56,6 +56,7 @@
     <nav class="navbar">
         <div class="navbar-logo">
             Update Transaksi
+            <img src="cihuyy.jpg">
         </div>
     </nav>
     
@@ -63,7 +64,7 @@
     
 
     <form class="form-card" method="POST">
-        <label style="color:  #16a34a;">Nama kasir</label> <br>
+        <label>Nama kasir</label> <br>
         <select name="kasir_id" required>
             <option value="">-- Pilih Kasir --</option>
             <?php while ($k = mysqli_fetch_assoc($kasir_list)) { ?>
@@ -71,35 +72,39 @@
             <?php } ?>
         </select> <br>
 
-        Tanggal <br>
+        <label>Tanggal</label> <br>
         <input type="date" name="tanggal" id="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
         <br>
 
-        Nama pelanggan <br>
+        <label>Nama pelanggan</label> <br>
         <input type="text" name="nama_pelanggan" placeholder="nama pelanggan" required><br>
-        Nomor HP<br>
+        <label>Nomor HP</label><br>
         <input type="text" name="nomor_hp_pelanggan" placeholder="nomor HP" required><br>
-        <label style="color:  #16a34a;">Nomor PS</label><br> 
+        <label>Nomor PS</label><br> 
         <select name="ps_id" id="ps_id" required>
             <option value="">-- Pilih PS --</option>
             <?php while ($p = mysqli_fetch_assoc($ps_list)) { ?>
-                <option value="<?php echo $p['id_ps']; ?>">
+                <option value="<?php echo $p['id_ps']; ?>" data-harga="<?php echo (float) $p['harga_per_jam']; ?>">
                     <?php echo $p['id_ps'] . ' - ' . htmlspecialchars($p['nama_ps']) . ' (' . htmlspecialchars($p['tipe']) . ') - Rp' . number_format((float) $p['harga_per_jam'], 0, ',', '.') . '/jam'; ?>
                 </option>
             <?php } ?>
         </select> <br> <br>
 
-        Masukan Durasi Main <br>
+        <label>Masukan Durasi Main</label> <br>
         <input type="number" name="durasi_jam" id="durasi_jam" min="1" max="24" step="1" value="1" required> <br>
     
-         Main Jam Berapa <br>
+        <label>Main Jam Berapa</label> <br>
 
-        mulai <br>
+        <label>mulai</label> <br>
         <input type="time" name="jam_mulai" id="jam_mulai" required><br>
-        selesai <br>
+        <label>selesai</label> <br>
         <input type="time" name="jam_selesai" id="jam_selesai" readonly required><br>
         <br>
-        <input type="submit" name="update" value="Update">
+        
+        <label>Total biaya</label> <br>
+        <input type="text" id="total" readonly><br>
+
+        <input type="submit" name="update" value="update">
     </form>
 
     <div class="card-right">
@@ -112,56 +117,72 @@
             <h3>PS01</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">EA FC 26</span>
+            <span class="game">MotoGP 23</span>
+            <span class="game">UFC 23</span>
         </div>
 
         <div class="ruangan">
             <h3>PS02</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Minecraft</span>
+            <span class="game">Roblox</span>
+            <span class="game">EA FC 26</span>
         </div>
 
         <div class="ruangan">
             <h3>PS03</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">God of War</span>
+            <span class="game">Elden Ring</span>
+            <span class="game">Dark Souls 3</span>
         </div>
 
         <div class="ruangan">
             <h3>PS04</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Genshin Impact</span>
+            <span class="game">Spider-Man</span>
+            <span class="game">A Way Out</span>
         </div>
 
         <div class="ruangan">
             <h3>PS05</h3>
             <p>PS4</p>
             <p>Rp8.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Tekken 8</span>
+            <span class="game">Mortal Kombat</span>
+            <span class="game">Battlefield 6</span>
         </div>
 
         <div class="ruangan">
             <h3>PS06</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Grand Turismo 7</span>
+            <span class="game">GTA 5</span>
+            <span class="game">NFS Heat</span>
         </div>
 
         <div class="ruangan">
             <h3>PS07</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">Naruto x Boruto 5</span>
+            <span class="game">Astrobot</span>
+            <span class="game">Horizon</span>
         </div>
 
         <div class="ruangan">
             <h3>PS08</h3>
             <p>PS5</p>
             <p>Rp12.000 / jam</p>
-            <span class="status tersedia">Tersedia</span>
+            <span class="game">God of War</span>
+            <span class="game">EA FC 26</span>
+            <span class="game">E-Football</span>
         </div>
 
     </div>

@@ -17,6 +17,7 @@
     <nav class="navbar">
         <div class="navbar-logo">
             Kasir Rental PS Cihuyy
+            <img src="cihuyy.jpg">
         </div>
         
         <ul class="navbar-menu">
