@@ -106,7 +106,6 @@
         <input type="text" id="total" readonly><br>
 
         <input type="submit" name="simpan" value="Simpan">
-        <a href="riwayat.php" class="btn-batal">Batal</a>
     </form>
 
     <div class="card-right">
