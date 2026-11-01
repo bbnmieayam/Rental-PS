@@ -63,48 +63,53 @@
 <div class="container">
     
 
-    <form class="form-card" method="POST">
+       <form class="form-card" method="POST">
         <label>Nama kasir</label> <br>
         <select name="kasir_id" required>
             <option value="">-- Pilih Kasir --</option>
             <?php while ($k = mysqli_fetch_assoc($kasir_list)) { ?>
-                <option value="<?php echo $k['id_kasir']; ?>"><?php echo htmlspecialchars($k['nama_kasir']); ?></option>
+                <option value="<?php echo $k['id_kasir']; ?>" <?php echo ($k['id_kasir'] == $row['kasir_id']) ? 'selected' : ''; ?>>
+                    <?php echo htmlspecialchars($k['nama_kasir']); ?>
+                </option>
             <?php } ?>
         </select> <br>
 
         <label>Tanggal</label> <br>
-        <input type="date" name="tanggal" id="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
+        <input type="date" name="tanggal" id="tanggal" value="<?php echo date('Y-m-d', strtotime($row['tanggal'])); ?>" required>
         <br>
 
         <label>Nama pelanggan</label> <br>
-        <input type="text" name="nama_pelanggan" placeholder="nama pelanggan" required><br>
+        <input type="text" name="nama_pelanggan" value="<?php echo htmlspecialchars($row['nama_pelanggan']); ?>" required><br>
+
         <label>Nomor HP</label><br>
-        <input type="text" name="nomor_hp_pelanggan" placeholder="nomor HP" required><br>
-        <label>Nomor PS</label><br> 
+        <input type="text" name="nomor_hp_pelanggan" value="<?php echo htmlspecialchars($row['nomor_hp_pelanggan']); ?>" required><br>
+
+        <label>Nomor PS</label><br>
         <select name="ps_id" id="ps_id" required>
             <option value="">-- Pilih PS --</option>
             <?php while ($p = mysqli_fetch_assoc($ps_list)) { ?>
-                <option value="<?php echo $p['id_ps']; ?>" data-harga="<?php echo (float) $p['harga_per_jam']; ?>">
+                <option value="<?php echo $p['id_ps']; ?>" data-harga="<?php echo (float) $p['harga_per_jam']; ?>" <?php echo ($p['id_ps'] == $row['ps_id']) ? 'selected' : ''; ?>>
                     <?php echo $p['id_ps'] . ' - ' . htmlspecialchars($p['nama_ps']) . ' (' . htmlspecialchars($p['tipe']) . ') - Rp' . number_format((float) $p['harga_per_jam'], 0, ',', '.') . '/jam'; ?>
                 </option>
             <?php } ?>
         </select> <br> <br>
 
         <label>Masukan Durasi Main</label> <br>
-        <input type="number" name="durasi_jam" id="durasi_jam" min="1" max="24" step="1" value="1" required> <br>
-    
+        <input type="number" name="durasi_jam" id="durasi_jam" min="1" max="24" step="1" value="<?php echo (int) $row['durasi_jam']; ?>" required> <br>
+
         <label>Main Jam Berapa</label> <br>
 
         <label>mulai</label> <br>
-        <input type="time" name="jam_mulai" id="jam_mulai" required><br>
+        <input type="time" name="jam_mulai" id="jam_mulai" value="<?php echo substr($row['jam_mulai'], 0, 5); ?>" required><br>
         <label>selesai</label> <br>
-        <input type="time" name="jam_selesai" id="jam_selesai" readonly required><br>
+        <input type="time" name="jam_selesai" id="jam_selesai" value="<?php echo substr($row['jam_selesai'], 0, 5); ?>" readonly required><br>
         <br>
-        
+
         <label>Total biaya</label> <br>
         <input type="text" id="total" readonly><br>
 
-        <input type="submit" name="update" value="update">
+        <input type="submit" name="update" value="Update">
+        <a href="riwayat.php" class="btn-batal">Batal</a>
     </form>
 
     <div class="card-right">

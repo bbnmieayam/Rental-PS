@@ -227,6 +227,28 @@ input[type="submit"]:active {
     margin-bottom: 20px;
 }
 
+.btn-batal {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 46px;
+    line-height: 46px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #f51d09;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn-batal:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+}
+
 .ruangan-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
