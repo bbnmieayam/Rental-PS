@@ -43,9 +43,9 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `nama_lengkap`, `nama_pengguna`, `kata_sandi`, `peran`) VALUES
-(1, 'Andi Subianto', 'Kasir Andi', 'manusiaandi', 'admin'),
-(2, 'Siregar Budiono', 'Kasir Siregar', 'manusiasiregar', 'admin'),
-(3, 'Yanto Bengkel', 'Kasir Yanto', 'manusiayanto', 'admin');
+(1, 'Andi Subianto', 'Kasir Andi', '$2y$10$uuRX0sdiRk9EiYeqNmU3W.QFJDZD6dX.yT.lrc7VRjkB02kg77VMG', 'admin'),
+(2, 'Siregar Budiono', 'Kasir Siregar', '$2y$10$wF/zoo8VbRy0ih/jR.jhPOu0M5ySrL9rpvYOP621ugE0POiQgzHlq', 'admin'),
+(3, 'Yanto Bengkel', 'Kasir Yanto', '$2y$10$4nitoU2.piyTzN0z4qGnIOk9AZmOwv7AzFJ9BGlAzfiIj3FM5N1Su', 'admin');
 
 -- --------------------------------------------------------
 
