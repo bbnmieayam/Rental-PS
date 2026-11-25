@@ -8,3 +8,4 @@ function beranda() {
     require 'views/user/beranda.php';
     require 'views/layout/footer.php';
 }
+
