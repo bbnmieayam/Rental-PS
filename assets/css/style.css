@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -18,7 +22,6 @@ a {
     color: #16a34a;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,7 +59,12 @@ a {
     background: #16a34a;
 }
 
-/* ===== Notifikasi ===== */
+.navbar_utama {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
 .notifikasi {
     max-width: 1000px;
     margin: 16px auto 0;
@@ -73,6 +81,76 @@ a {
 .notifikasi_gagal {
     background: #fee2e2;
     color: #991b1b;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e5e7eb;
+    color: #111827;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.tombol:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.tombol:active {
+    transform: scale(0.98);
+}
+
+.tombol_utama,
+.tombol_sukses {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.tombol_utama:hover,
+.tombol_sukses:hover {
+    background: #15803d;
+}
+
+.tombol_bahaya {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.tombol_bahaya:hover {
+    background: #b91c1c;
+}
+
+.tombol_netral {
+    background: #6b7280;
+    color: #ffffff;
+}
+
+.tombol_netral:hover {
+    background: #4b5563;
+}
+
+.tombol_garis {
+    background: transparent;
+    color: #4ade80;
+    border: 2px solid #16a34a;
+}
+
+.tombol_garis:hover {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.tombol_penuh {
+    display: block;
+    width: 100%;
+    height: 46px;
+    font-size: 15px;
 }
 
 .kartu_form {
@@ -150,54 +228,6 @@ a {
     text-decoration: underline;
 }
 
-.tombol {
-    display: inline-block;
-    padding: 9px 16px;
-    border: none;
-    border-radius: 8px;
-    background: #e5e7eb;
-    color: #111827;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.tombol:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-
-.tombol:active {
-    transform: scale(0.98);
-}
-
-.tombol_utama {
-    background: #16a34a;
-    color: #ffffff;
-}
-
-.tombol_utama:hover {
-    background: #15803d;
-}
-
-.tombol_bahaya {
-    background: #dc2626;
-    color: #ffffff;
-}
-
-.tombol_bahaya:hover {
-    background: #b91c1c;
-}
-
-.tombol_penuh {
-    display: block;
-    width: 100%;
-    height: 46px;
-    font-size: 15px;
-}
-
 .isi_halaman {
     max-width: 1000px;
     margin: 28px auto;
@@ -215,19 +245,78 @@ a {
     margin-bottom: 12px;
 }
 
-.kotak_statistik {
+.kepala_halaman {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.kepala_halaman h2 {
+    margin-bottom: 0;
+}
+
+.hero {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 16px 56px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    max-width: 560px;
+    margin: 0 auto 26px;
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+.hero_tombol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer_utama {
+    padding: 28px 16px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.kotak_statistik,
+.kotak_ruangan {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 16px;
     margin-top: 16px;
 }
 
-.kartu_statistik {
-    padding: 18px;
+.kotak_statistik {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+.kotak_ruangan {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.kartu_statistik,
+.kartu_ruangan {
     background: #ffffff;
     border-radius: 12px;
-    border-left: 5px solid #16a34a;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.kartu_statistik {
+    padding: 18px;
+    border-left: 5px solid #16a34a;
 }
 
 .kartu_statistik span {
@@ -242,20 +331,10 @@ a {
     font-size: 26px;
 }
 
-.kotak_ruangan {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
 .kartu_ruangan {
     padding: 20px;
-    background: #ffffff;
     border: 1px solid #d1d5db;
-    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
 
@@ -282,7 +361,6 @@ a {
     font-weight: bold;
 }
 
-/* ===== Tabel ===== */
 .tabel {
     width: 100%;
     margin-top: 16px;
@@ -320,19 +398,6 @@ a {
     font-size: 13px;
 }
 
-.kepala_halaman {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 6px;
-}
-
-.kepala_halaman h2 {
-    margin-bottom: 0;
-}
-
 .bungkus_tabel {
     overflow-x: auto;
 }
@@ -347,20 +412,55 @@ a {
     margin: 0;
 }
 
-.tombol_sukses {
-    background: #16a34a;
-    color: #ffffff;
+.modal_latar {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    padding: 16px;
+    overflow-y: auto;
+    background: rgba(8, 15, 12, 0.55);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
-.tombol_sukses:hover {
-    background: #15803d;
+.modal_latar.terbuka {
+    display: flex;
 }
 
-.tombol_netral {
-    background: #6b7280;
-    color: #ffffff;
+.modal_isi {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
 }
 
-.tombol_netral:hover {
-    background: #4b5563;
+.modal_isi .kartu_form {
+    margin: 0;
+}
+
+.modal_isi .notifikasi {
+    margin: 0 0 12px;
+}
+
+.modal_tutup {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    z-index: 1;
+    border: none;
+    background: none;
+    color: #6b7280;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal_tutup:hover {
+    color: #111827;
+}
+
+body.modal_aktif {
+    overflow: hidden;
 }

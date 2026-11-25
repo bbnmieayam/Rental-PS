@@ -7,20 +7,24 @@ require_once 'controllers/RuanganController.php';
 require_once 'controllers/BerandaController.php';
 require_once 'controllers/BookingController.php'; 
 require_once 'controllers/TransaksiController.php';
+require_once 'controllers/UtamaController.php';
 
 if (isset($_GET['halaman'])) {
     $halaman = $_GET['halaman'];
 } else {
-    $halaman = 'login';
+    $halaman = 'utama';
 }
 
 if (isset($_GET['halaman'])) {
     $halaman = $_GET['halaman'];
 } else {
-    $halaman = 'login';
+    $halaman = 'utama';
 }
 
 switch ($halaman) {
+    case 'utama':
+        utama();
+        break;
     case 'login':
         login();
         break;

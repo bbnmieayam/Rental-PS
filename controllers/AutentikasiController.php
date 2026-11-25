@@ -37,9 +37,7 @@ function login() {
         }
     }
 
-    require 'views/layout/header.php';
-    require 'views/autentikasi/login.php';
-    require 'views/layout/footer.php';
+    utama(true, $nama_pengguna_lama);
 }
 
 function daftar() {
@@ -79,9 +77,7 @@ function daftar() {
         }
     }
 
-    require 'views/layout/header.php';
-    require 'views/autentikasi/daftar.php';
-    require 'views/layout/footer.php';
+    utama(false, $nama_pengguna_lama, true, $nama_lengkap_lama);
 }
 
 function logout() {
