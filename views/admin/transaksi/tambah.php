@@ -1,8 +1,8 @@
-<div class="kartu_form kartu_lebar">
+<div class="kartu_form">
     <h2>Tambah Transaksi</h2>
     <p class="keterangan_form">Input transaksi pelanggan yang datang langsung.</p>
 
-    <form method="POST" action="index.php?halaman=transaksi&aksi=tambah">
+    <form method="POST" action="index.php?halaman=transaksi_tambah">
         <div class="kelompok_input">
             <label for="id_ruangan">Ruangan</label>
             <select id="id_ruangan" name="id_ruangan" required>
@@ -10,7 +10,7 @@
                 <?php foreach ($daftar_ruangan as $ruangan) { ?>
                     <option value="<?= $ruangan['id_ruangan'] ?>"
                         <?php if ($ruangan['id_ruangan'] == $id_ruangan_lama) { echo 'selected'; } ?>>
-                        <?= htmlspecialchars($ruangan['nama_ruangan']) ?> (<?= $ruangan['jenis_konsol'] ?>)
+                        <?= htmlspecialchars($ruangan['nama_ruangan']) ?> (<?= htmlspecialchars($ruangan['jenis_konsol']) ?>)
                         - Rp <?= number_format($ruangan['harga_per_jam'], 0, ',', '.') ?>/jam
                     </option>
                 <?php } ?>

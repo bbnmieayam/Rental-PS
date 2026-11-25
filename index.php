@@ -5,6 +5,14 @@ require_once 'controllers/AutentikasiController.php';
 require_once 'controllers/DashboardController.php';
 require_once 'controllers/RuanganController.php';
 require_once 'controllers/BerandaController.php';
+require_once 'controllers/BookingController.php'; 
+require_once 'controllers/TransaksiController.php';
+
+if (isset($_GET['halaman'])) {
+    $halaman = $_GET['halaman'];
+} else {
+    $halaman = 'login';
+}
 
 if (isset($_GET['halaman'])) {
     $halaman = $_GET['halaman'];
@@ -45,10 +53,47 @@ switch ($halaman) {
         ruangan_hapus();
         break;
 
-    // ---- khusus user ----
-    case 'beranda':
+     case 'transaksi':
+        cek_admin();
+        transaksi_daftar();
+        break;
+    case 'transaksi_tambah':
+        cek_admin();
+        transaksi_tambah();
+        break;
+    case 'transaksi_edit':
+        cek_admin();
+        transaksi_edit();
+        break;
+    case 'transaksi_bayar':
+        cek_admin();
+        transaksi_bayar();
+        break;
+    case 'transaksi_batal':
+        cek_admin();
+        transaksi_batal();
+        break;
+    case 'transaksi_hapus':
+        cek_admin();
+        transaksi_hapus();
+        break;
+
+
+   case 'beranda':
         cek_login();
         beranda();
+        break;
+    case 'booking':
+        cek_login();
+        booking();
+        break;
+    case 'riwayat':
+        cek_login();
+        riwayat();
+        break;
+    case 'riwayat_batal':
+        cek_login();
+        riwayat_batal();
         break;
 
     default:

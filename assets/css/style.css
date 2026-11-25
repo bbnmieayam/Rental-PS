@@ -319,3 +319,48 @@ a {
     padding: 6px 12px;
     font-size: 13px;
 }
+
+.kepala_halaman {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.kepala_halaman h2 {
+    margin-bottom: 0;
+}
+
+.bungkus_tabel {
+    overflow-x: auto;
+}
+
+.baris_aksi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.baris_aksi form {
+    margin: 0;
+}
+
+.tombol_sukses {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.tombol_sukses:hover {
+    background: #15803d;
+}
+
+.tombol_netral {
+    background: #6b7280;
+    color: #ffffff;
+}
+
+.tombol_netral:hover {
+    background: #4b5563;
+}

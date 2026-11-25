@@ -24,7 +24,7 @@
             <td><span class="status <?= $baris['status'] ?>"><?= $baris['status'] ?></span></td>
             <td>
                 <?php if ($baris['status'] == 'dipesan') { ?>
-                    <form method="POST" action="index.php?halaman=riwayat&aksi=batal"
+                    <form method="POST" action="index.php?halaman=riwayat_batal"
                           onsubmit="return confirm('Batalkan booking ini?')">
                         <input type="hidden" name="id_transaksi" value="<?= $baris['id_transaksi'] ?>">
                         <button type="submit" class="tombol tombol_kecil tombol_bahaya">Batalkan</button>

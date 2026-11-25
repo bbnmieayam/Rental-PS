@@ -1,8 +1,8 @@
-<div class="kartu_form kartu_lebar">
+<div class="kartu_form">
     <h2>Edit Transaksi</h2>
     <p class="keterangan_form">Ruangan: <b><?= htmlspecialchars($transaksi['nama_ruangan']) ?></b></p>
 
-    <form method="POST" action="index.php?halaman=transaksi&aksi=edit&id=<?= $transaksi['id_transaksi'] ?>">
+    <form method="POST" action="index.php?halaman=transaksi_edit&id=<?= $transaksi['id_transaksi'] ?>">
         <div class="kelompok_input">
             <label for="nama_pelanggan">Nama pelanggan</label>
             <input type="text" id="nama_pelanggan" name="nama_pelanggan"

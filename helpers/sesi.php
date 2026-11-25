@@ -39,3 +39,11 @@ function cek_admin() {
         pindah('beranda');
     }
 }
+
+function kelas_menu($awalan) {
+    global $halaman;
+    if (strpos($halaman, $awalan) === 0) {
+        return 'aktif';
+    }
+    return '';
+}
