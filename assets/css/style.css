@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+}
+
+/* ---------- Navigasi ---------- */
+.navigasi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: #1e293b;
+}
+.navigasi a { color: #fff; text-decoration: none; margin-left: 16px; }
+.navigasi a:hover { text-decoration: underline; }
+.navigasi .merek { font-weight: bold; margin-left: 0; font-size: 18px; }
+
+.konten { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+
+/* ---------- Notifikasi ---------- */
+.pesan {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.pesan.sukses { background: #2e9e4f; }
+.pesan.gagal  { background: #d93a3a; }
+
+/* ---------- Form (login & daftar) ---------- */
+.kartu_form {
+    max-width: 400px;
+    margin: 32px auto;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.kartu_form h2 { margin: 0 0 4px; color: #1e293b; }
+.keterangan_form { margin: 0 0 20px; color: #64748b; font-size: 14px; }
+
+.kelompok_input { margin-bottom: 16px; }
+.kelompok_input label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+.kelompok_input input,
+.kelompok_input select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.kelompok_input input:focus,
+.kelompok_input select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.kelompok_input small { display: block; margin-top: 4px; color: #64748b; font-size: 12px; }
+
+.tautan_bawah { margin: 18px 0 0; text-align: center; font-size: 14px; color: #475569; }
+.tautan_bawah a { color: #2563eb; text-decoration: none; font-weight: bold; }
+.tautan_bawah a:hover { text-decoration: underline; }
+
+/* ---------- Tombol ---------- */
+.tombol {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.tombol_utama { background: #2563eb; color: #fff; }
+.tombol_utama:hover { background: #1d4ed8; }
+.tombol_bahaya { background: #d93a3a; color: #fff; }
+.tombol_sukses { background: #2e9e4f; color: #fff; }
+.tombol_penuh { width: 100%; }
+
+/* ---------- Card ruangan ---------- */
+.daftar_card { display: flex; flex-wrap: wrap; gap: 16px; }
+.card {
+    width: 240px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.status {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 13px;
+}
+.tersedia { background: #2e9e4f; }
+.tidak_tersedia { background: #d93a3a; }
